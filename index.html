@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#063b52">
+<title>JV Essence · Pagos</title>
+
+<style>
+:root{
+  --navy:#063b52;
+  --navy2:#0b5266;
+  --teal:#0fa6b3;
+  --teal2:#dff8f7;
+  --aqua:#effcfb;
+  --gold:#d99a19;
+  --gold2:#f4c95d;
+  --ink:#17313b;
+  --muted:#60767d;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; min-height:100vh; font-family:Arial,Helvetica,sans-serif;
+  background:
+    radial-gradient(circle at top,#ffffff 0%,transparent 35%),
+    linear-gradient(145deg,#f7ffff 0%,#e5faf9 45%,#c9f1ef 75%,#b5e7e5 100%);
+  color:var(--ink); display:flex; justify-content:center;
+}
+.card{
+  width:min(430px,100%); min-height:100vh; padding:28px 20px 30px;
+  display:flex; flex-direction:column; align-items:center;
+}
+.brand{
+  width:125px;height:125px;border-radius:50%;background:white;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 10px 30px rgba(6,59,82,.18),0 0 0 2px rgba(217,154,25,.35);
+  margin-top:8px;overflow:hidden;
+}
+.brand img{width:100%;height:100%;object-fit:cover}
+h1{
+  font-family:Georgia,serif;font-size:31px;margin:16px 0 3px;
+  letter-spacing:.5px;color:var(--navy)
+}
+.subtitle{
+  font-size:14px;color:var(--muted);margin-bottom:25px;text-align:center
+}
+.gold-line{
+  width:55px;height:3px;border-radius:10px;
+  background:linear-gradient(90deg,var(--gold),var(--gold2));
+  margin:5px auto 12px
+}
+.section{
+  width:100%;background:rgba(255,255,255,.82);backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.9);border-radius:22px;padding:17px;
+  box-shadow:0 10px 30px rgba(6,59,82,.10);margin-bottom:15px
+}
+.section h2{font-size:15px;margin:0 0 12px;color:var(--navy)}
+.btn{
+  display:flex;align-items:center;gap:12px;width:100%;padding:15px 16px;
+  border-radius:15px;text-decoration:none;color:var(--ink);background:#fff;
+  border:1px solid #d7eeee;margin:8px 0;transition:.15s;font-weight:700;cursor:pointer
+}
+.btn:hover{border-color:var(--teal);box-shadow:0 5px 15px rgba(15,166,179,.12)}
+.btn:active{transform:scale(.98)}
+.icon{
+  width:40px;height:40px;border-radius:12px;background:var(--teal2);
+  display:grid;place-items:center;font-size:20px;flex:none;border:1px solid #c6eeee
+}
+.small{display:block;font-size:11px;color:var(--muted);font-weight:400;margin-top:3px}
+.data{
+  background:linear-gradient(135deg,#f8ffff,#eafafa);border-radius:14px;
+  padding:13px;margin-top:8px;font-size:13px;line-height:1.7;
+  border:1px dashed #9ed7d8;overflow:hidden
+}
+.data b{color:var(--navy)}
+.copy{
+  float:right;border:0;background:var(--navy);color:white;border-radius:9px;
+  padding:7px 10px;font-size:11px;font-weight:bold;cursor:pointer;transition:.15s
+}
+.copy:hover{background:var(--teal)}
+.copy:active{transform:scale(.95)}
+.note{text-align:center;color:var(--muted);font-size:12px;line-height:1.5}
+.footer{margin-top:auto;padding-top:12px;color:#6f9197;font-size:11px;text-align:center}
+</style>
+</head>
+
+<body>
+<main class="card">
+
+  <div class="brand">
+    <img src="jv-logo.jpg" alt="JV Essence">
+  </div>
+
+  <h1>JV Essence</h1>
+  <div class="gold-line"></div>
+
+  <div class="subtitle">
+    Studio de Diseño & Impresión 3D · Pagos
+  </div>
+
+  <section class="section">
+    <h2>💳 Elige cómo pagar</h2>
+
+    <!-- MERCADO PAGO: CAMBIA EL ENLACE -->
+    <a
+      class="btn"
+      href="CAMBIA_AQUI_TU_LINK_DE_MERCADO_PAGO"
+      target="_blank"
+      rel="noopener">
+      <div class="icon">💳</div>
+      <div>
+        Mercado Pago
+        <span class="small">Paga con tarjeta o desde Mercado Pago</span>
+      </div>
+    </a>
+
+    <!-- TRANSFERENCIA -->
+    <div
+      class="btn"
+      onclick="document.getElementById('bank').scrollIntoView({behavior:'smooth'})">
+      <div class="icon">🏦</div>
+      <div>
+        Transferencia bancaria
+        <span class="small">Ver cuenta y CLABE</span>
+      </div>
+    </div>
+
+    <!-- WHATSAPP: CAMBIA EL NUMERO -->
+    <a
+      class="btn"
+      href="https://wa.me/CAMBIA_AQUI_TU_NUMERO?text=Hola%20JV%20Essence%2C%20te%20env%C3%ADo%20mi%20comprobante%20de%20pago."
+      target="_blank"
+      rel="noopener">
+      <div class="icon">💬</div>
+      <div>
+        WhatsApp
+        <span class="small">Envía tu comprobante de pago</span>
+      </div>
+    </a>
+  </section>
+
+  <section class="section" id="bank">
+    <h2>🏦 Datos para transferencia</h2>
+
+    <div class="data">
+      <b>Banco:</b> CAMBIA AQUÍ
+      <br>
+
+      <b>Beneficiario:</b> CAMBIA AQUÍ
+      <br>
+
+      <b>Cuenta:</b>
+      <span id="Cuenta">CAMBIA_AQUI</span>
+      <button class="copy" onclick="copyText('Cuenta','CUENTA')">COPIAR</button>
+
+      <br><br>
+
+      <b>CLABE:</b>
+      <span id="Clabe">CAMBIA_AQUI</span>
+      <button class="copy" onclick="copyText('Clabe','CLABE')">COPIAR</button>
+    </div>
+
+    <p class="note">
+      Después de realizar tu transferencia,
+      envía tu comprobante por WhatsApp.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>✨ JV Essence</h2>
+    <p class="note">
+      Diseño, personalización e impresión 3D.
+      <br><br>
+      Gracias por confiar en nosotros.
+    </p>
+  </section>
+
+  <div class="footer">
+    JV Essence · Studio de Diseño & Impresión 3D
+    <br>
+    Hecho con ♡
+  </div>
+
+</main>
+
+<script>
+function copyText(id,tipo){
+  const element=document.getElementById(id);
+  const text=element.innerText.trim();
+
+  if(navigator.clipboard){
+    navigator.clipboard.writeText(text)
+      .then(function(){
+        alert(tipo+" copiada");
+      })
+      .catch(function(){
+        copiarAlternativo(text,tipo);
+      });
+  }else{
+    copiarAlternativo(text,tipo);
+  }
+}
+
+function copiarAlternativo(text,tipo){
+  const temp=document.createElement("textarea");
+  temp.value=text;
+  temp.style.position="fixed";
+  temp.style.opacity="0";
+  document.body.appendChild(temp);
+  temp.focus();
+  temp.select();
+  document.execCommand("copy");
+  document.body.removeChild(temp);
+  alert(tipo+" copiada");
+}
+</script>
+
+</body>
+</html>
